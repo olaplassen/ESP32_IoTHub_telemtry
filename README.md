@@ -1,5 +1,5 @@
 # ESP32_IoTHub_telemtry
-
+Based on the "esp32/iothub_ll_telemetry_sample" from [Azure IoT Arduino](https://github.com/Azure/azure-iot-arduino)
 This library is a port of the Microsoft Azure IoT device SDK for C to Arduino. It is an Arduino script for ESP32 to generate IoTHub messages with telemetry data from a connected BME280 sensor. The script is intended to send data to IoThHub with the correct systemproperties which in turn fires an event and updates the corresponding Azure Digital Twins value. 
 
 Information flow: 
@@ -25,7 +25,7 @@ AzureIoTHub, AzureIoTUtility, AzureIoTProtocol_MQTT, AzureIoTProtocol_HTTP
 
 ## Run the sample
 Enter the following information in:
-[https://github.com/olaplassen/ESP32_IoTHub_telemtry/blob/main/iot_configs.h](config.h)
+[config.h](https://github.com/olaplassen/ESP32_IoTHub_telemtry/blob/main/iot_configs.h)
 - IOT_CONFIG_WIFI_SSID(wifi name)
 - IOT_CONFIG_WIFI_PASSWORD(wifi password)
 - DEVICE_CONNECTION_STRING(primary connection string from iothub device) <br />
