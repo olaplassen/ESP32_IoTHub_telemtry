@@ -24,5 +24,7 @@ Enter the following information in:
 [https://github.com/olaplassen/ESP32_IoTHub_telemtry/blob/main/iot_configs.h](config.h)
 - IOT_CONFIG_WIFI_SSID(wifi name)
 - IOT_CONFIG_WIFI_PASSWORD(wifi password)
-- DEVICE_CONNECTION_STRING(primary connection string from iothub device)
+- DEVICE_CONNECTION_STRING(primary connection string from iothub device) <br />
 NB! The wifi network used cannot have 3.party authentication like website log in. 
+
+- Upload the code to your ESP32.
