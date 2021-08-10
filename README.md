@@ -1,6 +1,10 @@
 # ESP32_IoTHub_telemtry
 
-This library is a port of the Microsoft Azure IoT device SDK for C to Arduino. It is an Arduino script for ESP32 to generate IoTHub messages with telemetry data from a connected BME280 sensor.
+This library is a port of the Microsoft Azure IoT device SDK for C to Arduino. It is an Arduino script for ESP32 to generate IoTHub messages with telemetry data from a connected BME280 sensor. The script is intended to send data to IoThHub with the correct systemproperties which in turn fires an event and updates the corresponding Azure Digital Twins value. 
+
+Information flow: 
+
+ESP32 + BME280 -> Azure IoTHub -> Azure Event Grid -> Azure Function -> Azure Digital twins.
 
 ## Prerequisites
 You should have the following ready before beginning with your board:
@@ -14,7 +18,7 @@ Install Arduino IDE
 Install the Azure IoT C SDK libraries by one of two options:
 
 Generate the Libraries by executing the make_sdk.py script within the build_all folder, E.x.: 
-<python3 make_sdk.py -o "your-output-folder">
+`python3 make_sdk.py -o <your-output-folder">`
 Note: this is also currently the ONLY way to build the AzureIoTSocket_WiFi library for using the esp32.
 Install the following libraries through the Arduino IDE Library Manager:
 AzureIoTHub, AzureIoTUtility, AzureIoTProtocol_MQTT, AzureIoTProtocol_HTTP
