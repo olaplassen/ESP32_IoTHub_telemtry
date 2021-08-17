@@ -20,13 +20,21 @@ Install the Azure IoT C SDK libraries:
 Install the following libraries through the Arduino IDE Library Manager:
 AzureIoTHub, AzureIoTUtility, AzureIoTProtocol_MQTT, AzureIoTProtocol_HTTP
 
+Wire the BME280 sensor to your ESP32 chip.
+- **ESP** - **BME280**
+- P22 - SCK
+- P21 - SDI
+- 3V3 - VIN
+- GND - GND
+
 ## Run the sample
 Enter the following information in:
 [config.h](https://github.com/olaplassen/ESP32_IoTHub_telemtry/blob/main/iot_configs.h)
 - IOT_CONFIG_WIFI_SSID(wifi name)
 - IOT_CONFIG_WIFI_PASSWORD(wifi password)
 - DEVICE_CONNECTION_STRING(primary connection string from iothub device) <br />
-NB! The wifi network used can not use 3.party authentication like website log in, authenticators etc. 
+NB! **The wifi network used can not use 3.party authentication like website log in, authenticators etc.**
 
-- Upload the code to your ESP32 from the Arduino IDE.
-- To monitor log data user the Serial monitor feature in the Arduino ide.
+Upload the code to your ESP32 from the Arduino IDE.
+NB! **Hold down the right most button when uploading the code until you see "Connecting .." in the output terminal.** 
+To monitor log data user the Serial monitor feature in the Arduino ide.
