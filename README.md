@@ -7,19 +7,16 @@ Information flow:
 ESP32 + BME280 -> Azure IoTHub -> Azure Event Grid -> Azure Function -> Azure Digital twins.
 
 ## Prerequisites
-You should have the following ready before beginning with your board:
+You should have the following resources ready before beginning with your board:
 
 Setup your IoT hub
 
 Provision your device and get its credentials
 
-Install Arduino IDE
+Install [Arduino IDE](https://www.arduino.cc/en/software)
 
-Install the Azure IoT C SDK libraries by one of two options:
+Install the Azure IoT C SDK libraries:
 
-Generate the Libraries by executing the make_sdk.py script within the build_all folder, E.x.: 
-`python3 make_sdk.py -o <your-output-folder">`
-Note: this is also currently the ONLY way to build the AzureIoTSocket_WiFi library for using the esp32.
 Install the following libraries through the Arduino IDE Library Manager:
 AzureIoTHub, AzureIoTUtility, AzureIoTProtocol_MQTT, AzureIoTProtocol_HTTP
 
@@ -29,6 +26,7 @@ Enter the following information in:
 - IOT_CONFIG_WIFI_SSID(wifi name)
 - IOT_CONFIG_WIFI_PASSWORD(wifi password)
 - DEVICE_CONNECTION_STRING(primary connection string from iothub device) <br />
-NB! The wifi network used cannot have 3.party authentication like website log in. 
+NB! The wifi network used can not use 3.party authentication like website log in, authenticators etc. 
 
-- Upload the code to your ESP32.
+- Upload the code to your ESP32 from the Arduino IDE.
+- To monitor log data user the Serial monitor feature in the Arduino ide.
