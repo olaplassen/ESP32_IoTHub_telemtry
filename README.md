@@ -14,11 +14,12 @@ Setup your IoT hub
 Provision your device and get its credentials
 
 Install [Arduino IDE](https://www.arduino.cc/en/software)
+- Start Arduino and open Preferences window.
+- Enter https://dl.espressif.com/dl/package_esp32_index.json into Additional Board Manager URLs field. You can add multiple URLs, separating them with commas.
+- Open Boards Manager from Tools > Board menu and install esp32 platform 1.0.2 or later
+- Select your ESP32 board from Tools > Board menu after installation
 
-Install the Azure IoT C SDK libraries:
-
-Install the following libraries through the Arduino IDE Library Manager:
-AzureIoTHub, AzureIoTUtility, AzureIoTProtocol_MQTT, AzureIoTProtocol_HTTP
+- Install the following libraries through the Arduino IDE Library Manager: AzureIoTHub, AzureIoTUtility, AzureIoTProtocol_MQTT, AzureIoTProtocol_HTTP
 
 Wire the BME280 sensor to your ESP32 chip.
 - **ESP** - **BME280**
@@ -28,6 +29,7 @@ Wire the BME280 sensor to your ESP32 chip.
 - GND - GND
 
 ## Run the sample
+Clone the repository and open the final_esp32_script.ino file in Arduino Ide. 
 Enter the following information in:
 [config.h](https://github.com/olaplassen/ESP32_IoTHub_telemtry/blob/main/iot_configs.h)
 - IOT_CONFIG_WIFI_SSID(wifi name)
